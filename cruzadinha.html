@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Palavras Cruzadas </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel="icon" href="img/icone.png">
+    <script src="https://kit.fontawesome.com/86027f91a6.js" crossorigin="anonymous"></script>
+    <script src='js/main.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-perguntas">
+            <div id="perguntas" class="perguntas">
+                <center><i class="fas fa-question"></i></center>
+                <h1>Perguntas</h1>
+                <div id="pergunta1" class="perguntas_gerais" style="display: block;">
+                    <label for="">1 - Qual é a sigla para Central Process Unit?</label>
+                    <center><input type="text" id="pergunta_um" class="in_perguntas" autofocus style="display: block;"></center>
+                    <h4 style="display: none;" id="pergunta_um_correta">CPU</h4>
+                    <br>
+                    <center><button onclick="verificar()" class="verificar" style="display: block;" id="id_resp">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP()" class="verificar"  style="display: none;" id="id_prox">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta2" class="perguntas_gerais" style="display: none;">
+                    <label for="">2 - Um circuto digital que realiza operações lógicas e aritméticas. Qual é o nome deste componente?</label>
+                    <center><input type="text" id="pergunta_dois" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_dois_correta">ULA</h4>
+                    <br>
+                    <center><button onclick="verificar2()" class="verificar" style="display: none;" id="id_resp2">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP2()" class="verificar" style="display: none;" id="id_prox2">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check2" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta3" class="perguntas_gerais" style="display: none;">
+                    <label for="">3 - Qual o tipo de memória que se encontra no topo da hierarquia de memória?</label>
+                    <center><input type="text" id="pergunta_tres" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_tres_correta">REGISTRADORES</h4>
+                    <br>
+                    <center><button onclick="verificar3()" class="verificar" style="display: none;" id="id_resp3">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP3()" class="verificar" style="display: none;" id="id_prox3">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check3" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta4" class="perguntas_gerais" style="display: none;">
+                    <label for="">4 - Tipo de memória volátil que tem como nome Random Acess Memory. Qual é a sigla deste componente?</label>
+                    <center><input type="text" id="pergunta_quatro" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_quatro_correta">RAM</h4>
+                    <br>
+                    <center><button onclick="verificar4()" class="verificar" style="display: none;" id="id_resp4">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP4()" class="verificar" style="display: none;" id="id_prox4">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check4" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta5" class="perguntas_gerais" style="display: none;">
+                    <label for="">5 - Qual o tipo de memória não volátil que oferece dados apenas para leitura</label>
+                    <center><input type="text" id="pergunta_cinco" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_cinco_correta">ROM</h4>
+                    <br>
+                    <center><button onclick="verificar5()" class="verificar" style="display: none;" id="id_resp5">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP5()" class="verificar" style="display: none;" id="id_prox5">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check5" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta6" class="perguntas_gerais" style="display: none;">
+                    <label for="">6 - Qual o tipo de memória não volátil que oferece dados apenas para leitura</label>
+                    <center><input type="text" id="pergunta_seis" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_seis_correta">EPROM</h4>
+                    <br>
+                    <center><button onclick="verificar6()" class="verificar" style="display: none;" id="id_resp6">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP6()" class="verificar" style="display: none;" id="id_prox6">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check6" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta7" class="perguntas_gerais" style="display: none;">
+                    <label for="">7 - Qual o tipo particular de EEPROM que mantém as informações armazenadas sem a necessidade de uma fonte de energia elétrica</label>
+                    <center><input type="text" id="pergunta_sete" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_sete_correta">FLASH</h4>
+                    <br>
+                    <center><button onclick="verificar7()" class="verificar" style="display: none;" id="id_resp7">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP7()" class="verificar" style="display: none;" id="id_prox7">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check7" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta8" class="perguntas_gerais" style="display: none;">
+                    <label for="">8 - Qual o nome da memória que tem uma grande capacidade de armazenar informações, também conhecida como memória auxiliar?</label>
+                    <center><input type="text" id="pergunta_oito" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_oito_correta">MEMÓRIA DE MASSA</h4>
+                    <br>
+                    <center><button onclick="verificar8()" class="verificar" style="display: none;" id="id_resp8">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP8()" class="verificar" style="display: none;" id="id_prox8">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check8" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta9" class="perguntas_gerais" style="display: none;">
+                    <label for="">9 - Qual a sigla do recurso que permite que outros componentes também acessem a memória RAM diretamente?</label>
+                    <center><input type="text" id="pergunta_nove" autofocus class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_nove_correta">DMA</h4>
+                    <br>
+                    <center><button onclick="verificar9()" class="verificar" style="display: none;" id="id_resp9">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP9()" class="verificar" style="display: none;" id="id_prox9">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check9" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta10" class="perguntas_gerais" style="display: none;">
+                    <label for="">10 - Qual a sigla do recurso também conhecido como  Slave Selects, Usado para selecionar circuitos que estão conectados no computador?</label>
+                    <center><input type="text" id="pergunta_dez" class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_dez_correta">CS</h4>
+                    <br>
+                    <center><button onclick="verificar10()" class="verificar" style="display: none;" id="id_resp10">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP10()" class="verificar" style="display: none;" id="id_prox10">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check10" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta11" class="perguntas_gerais" style="display: none;">
+                    <label for="">11 - Grupo de linhas ou trilhas usadas para se referir a um endereço físico na memória. O número de trilhas determina a quantidade de endereços na memória física</label>
+                    <center><input type="text" id="pergunta_onze" class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_onze_correta">ADRESS BUS</h4>
+                    <br>
+                    <center><button onclick="verificar11()" class="verificar" style="display: none;" id="id_resp11">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP11()" class="verificar" style="display: none;" id="id_prox11">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check11" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta12" class="perguntas_gerais" style="display: none;">
+                    <label for="">12 - Também chamado de Memory Bus. É responsável para carregar os dados.</label>
+                    <center><input type="text" id="pergunta_doze" class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_doze_correta">DATA BUS</h4>
+                    <br>
+                    <center><button onclick="verificar12()" class="verificar" style="display: none;" id="id_resp12">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP12()" class="verificar" style="display: none;" id="id_prox12">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check12" style="display: none;"> Parabéns resposta correta</i>
+                </div> 
+                <div id="pergunta13" class="perguntas_gerais" style="display: none;">
+                    <label for="">13 - Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em setembro de 2009</label>
+                    <center><input type="text" id="pergunta_treze" class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_treze_correta">I5</h4>
+                    <br>
+                    <center><button onclick="verificar13()" class="verificar" style="display: none;" id="id_resp13">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP13()" class="verificar" style="display: none;" id="id_prox13">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check13" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta14" class="perguntas_gerais" style="display: none;">
+                    <label for="">14 - Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em novembro de 2008</label>
+                    <center><input type="text" id="pergunta_quatorze" class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_quatorze_correta">I7</h4>
+                    <br>
+                    <center><button onclick="verificar14()" class="verificar" style="display: none;" id="id_resp14">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP14()" class="verificar" style="display: none;" id="id_prox14">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check14" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta15" class="perguntas_gerais" style="display: none;">
+                    <label for="">15 - Tipo de processador que possui dois processadores ou melhor dizendo ‘dois centros, núcleos ou cores de execução‘ no mesmo circuito integrado.  Cada core tem sua própria memória cash e controlador o que permite que funcione mais efetivamente do que um processador single</label>
+                    <center><input type="text" id="pergunta_quinze" class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_quinze_correta">DUAL CORE</h4>
+                    <br>
+                    <center><button onclick="verificar15()" class="verificar" style="display: none;" id="id_resp15">Verificar Resposta</button></center>
+                    <center><button onclick="proximaP15()" class="verificar" style="display: none;" id="id_prox15">Próxima Pergunta</button></center>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check15" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+                <div id="pergunta16" class="perguntas_gerais" style="display: none;">
+                    <label for="">16 - Segue o mesmo princípio de um dual-core, mas agora em teoria tem o dobro da capacidade de processamento</label>
+                    <center><input type="text" id="pergunta_dezeseis" class="in_perguntas" style="display: none;"></center>
+                    <h4 style="display: none;" id="pergunta_dezeseis_correta">QUAD CORE</h4>
+                    <br>
+                    <center><button onclick="verificar16()" class="verificar" style="display: none;" id="id_resp16">Verificar Resposta</button></center>
+                    <center><a href="final.html"><button class="verificar" style="display: none;color: aliceblue;" id="id_prox16">Finalizar Jogo</button></center></a>
+                    <br>
+                    <i class="fas fa-check-circle" id="id_check16" style="display: none;"> Parabéns resposta correta</i>
+                </div>
+            </div>
+        </div>
+        <div class="container-cacaPalavras">
+            <div id="id_cacaPalavras" class="cacaPalavras" >
+                <div class="column">
+                    <div class="row line"><span id="span_databus1"></span></div>
+                    <div class="row line"><span id="span_databus2"></span></div>
+                    <div class="row line"><span id="span_databus3"></span></div>
+                    <div class="row line"><span id="span_databus4"></span></div>
+                    <div class="row line"><span id="span_databus5"></span></div>
+                    <div class="row line"><span id="span_ula1"></span></div>
+                    <div class="row line"><span id="span_databus7"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row line"><span id="span_dual1"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_ula2"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row line"><span id="span_dual2"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_quad1"></span></div>
+                    <div class="row line"><span id="span_quad2"></span></div>
+                    <div class="row line"><span id="span_ula3"></span></div>
+                    <div class="row line"><span id="span_quad3"></span></div>
+                    <div class="row line"><span id="span_cpu1"></span></div>
+                    <div class="row line"><span id="span_quad4"></span></div>
+                    <div class="row line"><span id="span_reg1"></span></div>
+                    <div class="row line"><span id="span_quad5"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row line"><span id="span_dual3"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_cpu2"></span></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg2"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row line"><span id="span_dual4"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_cpu3"></span></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg3"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row line"><span id="span_dual5"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg4"></span></div>
+                    <div class="row line"><span id="span_i5"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row line"><span id="span_dual6"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg5"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_flash1"></span></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row line"><span id="span_eprom1"></span></div>
+                    <div class="row line"><span id="span_eprom2"></span></div>
+                    <div class="row line"><span id="span_eprom3"></span></div>
+                    <div class="row line"><span id="span_eprom4"></span></div>
+                    <div class="row line"><span id="span_eprom5"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg6"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_flash2"></span></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg7"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>                   
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_cs1"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_flash3"></span></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg8"></span></div>
+                    <div class="row line"><span id="span_adress1"></span></div>
+                    <div class="row line"><span id="span_adress2"></span></div>
+                    <div class="row line"><span id="span_adress3"></span></div>
+                    <div class="row line"><span id="span_adress4"></span></div>
+                    <div class="row line"><span id="span_adress5"></span></div>
+                    <div class="row line"><span id="span_adress6"></span></div>
+                    <div class="row line"><span id="span_adress7"></span></div>
+                    <div class="row line"><span id="span_adress8"></span></div>
+                    <div class="row line"><span id="span_adress9"></span></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_rom1"></span></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_ram1"></span></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg9"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_flash4"></span></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_rom2"></span></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_ram2"></span></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg10"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_dma1"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_rom3"></span></div>
+                    <div class="row line"><span id="span_memo1"></span></div>
+                    <div class="row line"><span id="span_ram3"></span></div>
+                    <div class="row line"><span id="span_memo2"></span></div>
+                    <div class="row line"><span id="span_reg11"></span></div>
+                    <div class="row line"><span id="span_memo3"></span></div>
+                    <div class="row line"><span id="span_memo4"></span></div>
+                    <div class="row line"><span id="span_memo5"></span></div>
+                    <div class="row line"><span id="span_memo6"></span></div>
+                    <div class="row line"><span id="span_dma2"></span></div>
+                    <div class="row line"><span id="span_memo7"></span></div>
+                    <div class="row line"><span id="span_memo8"></span></div>
+                    <div class="row line"><span id="span_memo9"></span></div>
+                    <div class="row line"><span id="span_memo10"></span></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg12"></span></div>
+                    <div class="row line"><span id="span_i7"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_dma3"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+                <div class="column ">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row line"><span id="span_reg13"></span></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
